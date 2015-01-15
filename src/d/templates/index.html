@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+{{ block.super  }} 
+{% for topic in topics %}
+<h1>Title: {{ topic.imei }}</h1>
+<p  class="text-left">TIME: {{ topic.created_date }}</p>
+<p>AUthor: {{ topic.author }}</p>
+<p>MSG: {{ topic.client_channel_name }}</p>
+<p>IP: {{ topic.ip }}</p>
+<p>TAGS: {{ topic.device }}</p>
+{% endfor %}
+{% endblock %}
